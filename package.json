@@ -1,0 +1,42 @@
+{
+  "name": "test-poc-mocha",
+  "version": "0.0.1",
+  "description": "mocha test framework poc",
+  "license": "UNLICENSED",
+  "scripts": {
+    "preinstall": "sh ./scripts/preinstall.sh",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix && yarn lint",
+    "lint:pretty": "yarn lint && yarn prettier:check",
+    "lint:fix:pretty": "yarn lint:fix && yarn prettier:write",
+    "test": "mocha tests",
+    "test:parallel": "mocha tests --parallel",
+    "test:file": "mocha",
+    "test:file:parallel": "mocha --parallel",
+    "test:grep": "mocha tests --grep",
+    "test:grep:parallel": "mocha tests --parallel --grep",
+    "test:watch": "mocha --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/register": "^7.16.0",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.9",
+    "axios": "^0.24.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "chai": "^4.3.4",
+    "dayjs": "^1.10.7",
+    "eslint": "^8.3.0",
+    "eslint-plugin-mocha": "^9.0.0",
+    "mocha": "^9.1.3",
+    "mocha-junit-reporter": "^2.0.2",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1",
+    "prettier": "^2.4.1"
+  }
+}

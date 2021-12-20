@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "module": "es2020",
+    "target": "es2021",
+    "allowJs": true,
+    "checkJs": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "types": ["node", "@types/mocha", "@types/chai"],
+    "paths": {
+      "@config/*": ["./config/*"],
+      "@constants/*": ["./constants/*"],
+      "@services/*": ["./services/*"]
+    }
+  },
+  "exclude": ["node_modules", "./.github", "./.vscode", "./artifacts"]
+}
