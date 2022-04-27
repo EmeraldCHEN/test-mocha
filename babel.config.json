@@ -16,8 +16,8 @@
         "root": ["./"],
         "alias": {
           "@config": "./config",
-          "@constants": "./constants",
-          "@services": "./services"
+          "@constant": "./constants",
+          "@service": "./services"
         }
       }
     ]

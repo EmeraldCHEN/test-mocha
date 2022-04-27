@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import { BlogPosts } from '@services/blog-posts';
-import { StatusCode } from '@constants/http-response-codes';
+import { BlogPosts } from '@service/blog-posts';
+import { StatusCode } from '@constant/http-response-codes';
 
 describe('Delete blog posts', function () {
   const blogPosts = new BlogPosts();
