@@ -7,6 +7,24 @@ describe('Add update blog posts', function () {
 
   let blogPost;
 
+  const newPosts = [
+    {
+      title: 'New Title 2',
+      body: 'New blog details 2',
+      userId: 2
+    },
+    {
+      title: 'New Title 3',
+      body: 'New blog details 3',
+      userId: 3
+    },
+    {
+      title: 'New Title 4',
+      body: 'New blog details 4',
+      userId: 4
+    }
+  ];
+
   before('Get a blog post to use for searching and updates', async function () {
     await blogPosts.getAllPosts().then((response) => {
       expect(response.status).to.equal(StatusCode.Ok);
