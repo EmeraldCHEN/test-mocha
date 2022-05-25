@@ -33,11 +33,14 @@ describe('Add and delete blog posts', function () {
         await blogPosts.addPost(newPost).then((response) => {
           expect(response.status).to.equal(StatusCode.Created);
           expect(response.data).to.have.property('id');
+          console.log(response.data);
+          console.log(`${newPost.userId}: ${newPost.title} added`);
         });
         await blogPosts.getPost(newPost.userId).then((response) => {
           expect(response.status).to.equal(StatusCode.Ok);
         });
-        await blogPosts.deletePost(newPost.id).then((response) => {
+        await blogPosts.deletePost(newPost.userId).then((response) => {
+          console.log(`${newPost.userId}: ${newPost.title} deleted`);
           expect(response.status).to.equal(StatusCode.Ok);
         });
       });
